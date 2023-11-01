@@ -2,12 +2,14 @@
   configs: [
     %{
       name: "my-rules",
-      requires: ["./lib/cabify_credo/checks/**/*.ex"],
+      requires: ["./lib/my_credo/checks/**/*.ex"],
       checks: [
         {MyCredo.Checks.MyFirstCredoCheck, []}
       ],
-      included: ["lib/", "src/", "web/", "apps/"],
-      excluded: []
+      files: %{
+        included: ["mix.exs", "lib/", "src/", "web/", "apps/", "config/"],
+        excluded: ["deps/", "_build/"]
+      }
     }
   ]
 }
