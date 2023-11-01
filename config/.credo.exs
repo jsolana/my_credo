@@ -7,7 +7,7 @@
         {MyCredo.Checks.MyFirstCredoCheck, []}
       ],
       files: %{
-        included: ["mix.exs", "lib/", "src/", "web/", "apps/", "config/"],
+        included: ["mix.exs", "lib/", "src/", "web/", "apps/", "config/", "test/"],
         excluded: ["deps/", "_build/"]
       }
     }
