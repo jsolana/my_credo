@@ -11,7 +11,8 @@ defmodule DummyCredo.MixProject do
       description: description(),
       name: "Dummy Credo",
       package: package(),
-      docs: docs()
+      docs: docs(),
+      source_url: "https://github.com/jsolana/my_credo"
     ]
   end
 
@@ -26,6 +27,7 @@ defmodule DummyCredo.MixProject do
   defp package do
     %{
       licenses: [],
+      links: %{"GitHub" => "https://github.com/jsolana/my_credo"},
       files: [
         "lib",
         ".formatter.exs",
@@ -41,7 +43,9 @@ defmodule DummyCredo.MixProject do
       # The main page in the docs
       main: "readme",
       # logo: "guides/logo.png",
-      extras: ["README.md"]
+      extras: ["README.md"],
+      source_ref: "v#{@version}",
+      source_url: "https://github.com/jsolana/my_credo"
     ]
   end
 
