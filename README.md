@@ -19,7 +19,25 @@ Run credo using `my_rules` in a project:
     mix credo --config-name my-rules --config-file ./deps/my_credo/config/.credo.exs
 ```
 
-[Credo issue](https://github.com/rrrene/credo/issues/1083) to ask for another way to use `.credo.exs` files of a dependency.
+Or add an alias:
+
+```elixir
+def project do
+    [
+      ...
+      aliases: aliases()
+    ]
+  end
+
+# run mix credo
+defp aliases do
+    [
+      credo: [
+        "credo --config-name my-rules --config-file ./deps/my_credo/config/.credo.exs"
+      ]
+    ]
+  end
+```
 
 ## How to test it
 
